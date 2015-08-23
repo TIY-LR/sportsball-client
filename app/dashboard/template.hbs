@@ -1,1 +1,9 @@
+{{#md-navbar name='Sportsballz' homeRoute='dashboard' class='green darken-3'}}
+  <!-- A workaround to get the "active" class
+    to apply to the active <li> automatically -->
+  <li>
+    <a {{ action 'invalidateSession' }}>Logout</a>
+  </li>
+{{/md-navbar}}
+
 {{outlet}}

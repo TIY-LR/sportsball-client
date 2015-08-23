@@ -1,15 +1,17 @@
-<div class="login-page">
-  <div class="card login-form container">
-    <form class="card-content" {{action 'login' username password on='submit'}}>
-      <h3 class="center-align">Login</h3>
+<div class="container">
+  <div class="login-page">
+    <div class="card login-form container">
+      <form class="card-content" {{action 'login' username password on='submit'}}>
+        <h3 class="center-align">Login</h3>
 
-      {{md-input value=username label='Username'}}
+        {{md-input value=username label='Username'}}
 
-      {{md-input value=password label='Password' type='password'}}
+        {{md-input value=password label='Password' type='password'}}
 
-      {{md-btn-submit icon='mdi-content-send'
-          iconPosition='right'
-          text='Submit'}}
-    </form>
+        {{md-btn-submit icon='mdi-content-send'
+            iconPosition='right'
+            text='Submit'}}
+      </form>
+    </div>
   </div>
 </div>
