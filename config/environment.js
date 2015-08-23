@@ -12,6 +12,25 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
+    'simple-auth': {
+      authorizer: 'simple-auth-authorizer:oauth2-bearer',
+      crossOriginWhitelist: ['http://sportszballweb.azurewebsites.net'],
+      session: 'session:with-user',
+      routeAfterAuthentication: 'dashboard.index',
+    },
+    'simple-auth-oauth2': {
+      serverTokenEndpoint: 'http://sportszballweb.azurewebsites.net/token',
+    },
+
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self'",
+      'font-src': "'self'",
+      'connect-src': "'self'",
+      'img-src': "'self'",
+      'style-src': "'self' 'unsafe-inline'",
+      'media-src': "'self'"
+    },
 
     APP: {
       // Here you can pass flags/options to your application instance

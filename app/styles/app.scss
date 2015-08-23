@@ -1,2 +1,12 @@
 @import 'materialize';
 @import 'ember-cli-materialize';
+
+.login-page {
+  min-height: 1vh;
+}
+
+.login-form {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
