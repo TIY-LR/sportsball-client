@@ -1,0 +1,22 @@
+<div class="row">
+  <h2 class="left page-title">Invites</h2>
+
+  {{#link-to 'dashboard.invites.create'}}
+    {{md-btn icon='mdi-content-add' buttonType='floating'
+      class='btn-large right pink darken-3'}}
+  {{/link-to}}
+</div>
+
+<div class="row">
+  {{#if model}}
+    {{#md-collection content=model as |invite|}}
+      <li></li>
+    {{/md-collection}}
+  {{else}}
+    {{#md-card class='center-align' title='No Invites Are Active'}}
+      {{#md-card-content}}
+
+      {{/md-card-content}}
+    {{/md-card}}
+  {{/if}}
+</div>

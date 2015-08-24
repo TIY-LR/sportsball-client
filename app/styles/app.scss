@@ -10,3 +10,11 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+main {
+  margin-top: $collapsible-height;
+}
+
+.page-title {
+  margin-top: 0;
+}

@@ -1,7 +1,10 @@
 /* jshint node: true */
 
+var hostName = 'http://sportszballweb.azurewebsites.net';
+
 module.exports = function(environment) {
   var ENV = {
+    hostName: hostName,
     modulePrefix: 'sportsball-client',
     environment: environment,
     baseURL: '/',
@@ -14,12 +17,12 @@ module.exports = function(environment) {
     },
     'simple-auth': {
       authorizer: 'simple-auth-authorizer:oauth2-bearer',
-      crossOriginWhitelist: ['http://sportszballweb.azurewebsites.net'],
+      crossOriginWhitelist: [hostName],
       session: 'session:with-user',
       routeAfterAuthentication: 'dashboard.index',
     },
     'simple-auth-oauth2': {
-      serverTokenEndpoint: 'http://sportszballweb.azurewebsites.net/token',
+      serverTokenEndpoint: hostName + '/token',
     },
 
     contentSecurityPolicy: {

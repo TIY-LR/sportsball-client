@@ -1,0 +1,15 @@
+<div class="row">
+  <h2 class="left page-title">New Invite</h2>
+
+  {{#link-to 'dashboard.invites.create'}}
+  {{/link-to}}
+</div>
+
+<div class="row">
+  <form {{action 'submit' model on='submit'}}>
+    {{md-input value=model.email label='Email'}}
+
+    {{md-btn text='Submit'
+      class='btn-large right pink darken-3'}}
+  </form>
+</div>

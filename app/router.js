@@ -7,7 +7,9 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('dashboard', {path: '/'}, function() {
-
+    this.route('invites', function() {
+      this.route('create');
+    });
   });
 
   this.route('login');
